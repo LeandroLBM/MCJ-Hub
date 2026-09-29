@@ -1,0 +1,340 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="hzHb-pCX9oyfoG9qYIoK">
+    <mxGraphModel dx="3207" dy="1352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-56" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Usuário" vertex="1">
+          <mxGeometry height="80" width="40" x="400" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-20" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-96" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-95">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Aplicação por CMD" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-26" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Aplicação busca se o minecraft está instalado e a versão mais recente instalada&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-22" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="gjakHe0F9RlJ6MSFEC0J-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário seleciona a opção de modificações e demais aplicações" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-60" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-61" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-62" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-58">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-23" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário escolhe a modificação de forma separada" vertex="1">
+          <mxGeometry height="120" width="200" x="800" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-48" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="gjakHe0F9RlJ6MSFEC0J-47">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-54" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="gjakHe0F9RlJ6MSFEC0J-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-25" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="380" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-33" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Instalar pacote de modificações&lt;div&gt;(Mods, Texturas, Shaders)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-120" y="1080" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-38" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-37">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Verifica se todas as modificações estão disponíveis para versão atual&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-120" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-42" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-39">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-37" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Retorna quais versões estão disponíveis para atualização&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-120" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-41" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-40">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário seleciona se deseja instalar as modificações&amp;nbsp;" vertex="1">
+          <mxGeometry height="120" width="200" x="-120" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-45" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;strokeColor=light-dark(#000000,#FF0000);" target="gjakHe0F9RlJ6MSFEC0J-44">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-82" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="gjakHe0F9RlJ6MSFEC0J-79">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-20" y="2140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-40" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-60" y="1900" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-46" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Retorna mensagem de aplicação cancelada pelo usuário&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-260" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-50" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-47" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-47" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Retorna mensagem de Minecraft não instalado&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="80" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-52" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-55" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Retorna mensagem de verificação concluida e informando a versão mais recente instalada&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-81" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="1940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-57" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="Textura" vertex="1">
+          <mxGeometry height="80" width="80" x="1120" y="1295" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-66" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-58" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="Mods" vertex="1">
+          <mxGeometry height="80" width="80" x="600" y="1300" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-65" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-64">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-59" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;" value="shaders" vertex="1">
+          <mxGeometry height="80" width="80" x="860" y="1295" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-68" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-64" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-64" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário escolhe de deseja baixar um pacote dessa modificação ou não" vertex="1">
+          <mxGeometry height="120" width="200" x="660" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-73" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="gjakHe0F9RlJ6MSFEC0J-72">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-77" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-67" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="gjakHe0F9RlJ6MSFEC0J-76">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="1740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-67" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="720" y="1700" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-78" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-72" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-76">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-72" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário escolhe a modificação de forma separada" vertex="1">
+          <mxGeometry height="120" width="200" x="520" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-80" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-79">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="900" y="2140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário confirma se deseja aplicar o pacote escolhido" vertex="1">
+          <mxGeometry height="120" width="200" x="800" y="1880" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-84" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-79" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-83">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-79" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;A aplicação realiza download e atualiza todos os pacotes escolhidos&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="2080" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-87" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-83" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-86">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-83" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Retorna mensagem informando se a aplicação foi realizada com sucesso ou não&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="2280" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-85" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Usuário" vertex="1">
+          <mxGeometry height="80" width="40" x="520" y="2800" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-89" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-86" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário escolhe se deseja fechar o programa ou continuar do incio" vertex="1">
+          <mxGeometry height="120" width="200" x="320" y="2480" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-94" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FFFFFF);" target="gjakHe0F9RlJ6MSFEC0J-91">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="2720" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-88" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="380" y="2680" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-91" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Aplicação por CMD" vertex="1">
+          <mxGeometry height="120" width="200" x="200" y="2800" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-93" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-88" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=light-dark(#000000,#FFFFFF);" target="gjakHe0F9RlJ6MSFEC0J-85">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-98" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-97">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-95" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário seleciona a opção de backup (Local)" vertex="1">
+          <mxGeometry height="120" width="200" x="600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-100" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-99">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-97" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="Aplicação retorna informando os mapas instalados atualmente na pasta .Minecraft" vertex="1">
+          <mxGeometry height="120" width="200" x="880" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-104" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-99" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-99" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário seleciona qual mapa deseja realizar o backup" vertex="1">
+          <mxGeometry height="120" width="200" x="1160" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-106" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-103" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário seleciona se deseja realizar backup na pasta anterior ou em uma pasta nova" vertex="1">
+          <mxGeometry height="120" width="200" x="1440" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-108" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-112">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="140" />
+            </Array>
+            <mxPoint x="1880" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-110" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-109">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1760" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-105" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="1720" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-115" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-112">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-109" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa qual pasta deseja realizar o backup" vertex="1">
+          <mxGeometry height="120" width="200" x="1880" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-111" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Pasta anterior" vertex="1">
+          <mxGeometry height="20" width="90" x="1770" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-119" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-118">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-112" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Aplicação retorna se o local está disponivel para realizar o backup&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="1880" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-113" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Nova pasta" vertex="1">
+          <mxGeometry height="20" width="90" x="1770" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-121" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-118" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-118" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja realizar o backup" vertex="1">
+          <mxGeometry height="120" width="200" x="2160" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-124" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="gjakHe0F9RlJ6MSFEC0J-123">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-129" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-120" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="gjakHe0F9RlJ6MSFEC0J-128">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-120" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="2440" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-132" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-123" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-131">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-123" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Aplicação realiza a copia para a pasta desejada e renomeia com a data do dia que foi relizado o backup&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="2600" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-130" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-128" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-128" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Aplicação retorna mensagem de (Aplicação cancelada pelo Usuário)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="2380" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-134" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-131" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-131" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja fechar o progrma ou retornar ao inicio" vertex="1">
+          <mxGeometry height="120" width="200" x="2880" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-138" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="gjakHe0F9RlJ6MSFEC0J-135">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3200" y="120.03" />
+              <mxPoint x="3280" y="120.03" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-140" edge="1" parent="1" source="gjakHe0F9RlJ6MSFEC0J-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="3200" y="400.03" />
+            </Array>
+            <mxPoint x="3350" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-133" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="3160" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-135" parent="1" style="rounded=0;whiteSpace=wrap;html=1;align=center;" value="&lt;div style=&quot;&quot;&gt;Aplicação realiza a copia para a pasta desejada e renomeia com a data do dia que foi relizado o backup&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="3280" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-136" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fechar programa" vertex="1">
+          <mxGeometry height="30" width="60" x="470" y="2690" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-137" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="retornar ao incio" vertex="1">
+          <mxGeometry height="30" width="60" x="310" y="2690" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-139" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Usuário" vertex="1">
+          <mxGeometry height="80" width="40" x="3360" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-141" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Fechar programa" vertex="1">
+          <mxGeometry height="30" width="60" x="3250" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="gjakHe0F9RlJ6MSFEC0J-142" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="retornar ao inicio" vertex="1">
+          <mxGeometry height="30" width="60" x="3200" y="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
