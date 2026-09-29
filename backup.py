@@ -61,20 +61,20 @@ def realizar_backup():
     if not mundos:
         print("nenhum mundo encontrado.")
         return[]
-
-    print("mundos encontrados:\n")
-
-    print("0.Voltar")
-
-    for indice, mundo in enumerate(mundos, start=1):
-        tamanho = calcular_tamanho(mundo)
-        tamanho_formatado = formatar_tamanho(tamanho)
-
-        print(f"{indice}.{mundo.name} - {tamanho_formatado}")
     
-
     while True:
-        opcao = input("\nEscolha um mundo: ")
+        os.system("cls")
+
+        print("========== MUNDOS ENCONTRADOS ==========\n")
+        print("0.Voltar")
+
+        for indice, mundo in enumerate(mundos, start=1):
+            tamanho = calcular_tamanho(mundo)
+            tamanho_formatado = formatar_tamanho(tamanho)
+        
+            print(f"{indice}.{mundo.name} - {tamanho_formatado}")
+
+        opcao = input("\nEscolha uma opção: ")
 
         if opcao == "0":
             return
@@ -105,9 +105,48 @@ def realizar_backup():
             continue
 
         data_backup = datetime.now().strftime("%d_%m_%Y")
+        nome_mundo = mundo_escolhido.name
+
+        backup_existentes = [
+            pasta
+            for pasta in pasta_destino.iterdir()
+            if pasta.is_dir()
+            and pasta.name.startswith(f"{nome_mundo} (")
+        ]
+
+        cancelar_backup = False
+
+        if backup_existentes:
+            print("\nJá existem backups deste mundo:")
+
+            for backup in backup_existentes:
+                print(f"- {backup.name}")
+
+            while True:
+                opcao_backup = input(
+                    "\nDeseja excluir os backups existentes e criar um novo? (n/s): "
+                ).strip().lower()
+            
+                if opcao_backup == "s":
+                    for backup in backup_existentes:
+                        shutil.rmtree(backup)
+                
+                    print("\nBackups anteriores excluídos.")
+                    break
+
+                elif opcao_backup == "n":
+                    print("\nOperação cancelada.")
+                    print("\nPressione ENTER para continuar.")
+                    cancelar_backup = True
+                    break
+
+                else:
+                    print("\nOpção inválida. Digite (s) ou (n).")
+
+        if cancelar_backup:
+            continue
 
         nome_backup = f"{mundo_escolhido.name} ({data_backup})"
-
         destino_backup = pasta_destino / nome_backup
 
         while True:
@@ -129,7 +168,7 @@ def realizar_backup():
                 print(f"Local: {destino_backup}")
 
                 input("\nPressione ENTER para continuar.")
-                return
+                break
 
             except Exception as erro:
                 print("\nERRO AO REALIZAR O BACKUP!")
