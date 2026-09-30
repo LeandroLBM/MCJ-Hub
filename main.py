@@ -2,8 +2,8 @@ import os
 import sys
 from textwrap import dedent
 
-from backup import menu_backup
-from update_modifications import menu_update_modifications
+from BackupCode.backup import menu_backup
+from ModificationsCode.update_modifications import menu_update_modifications
 
 def menu():
     while True:

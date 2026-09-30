@@ -28,6 +28,7 @@ def menu_backup():
             break
 
         else:
+            os.system("cls")
             print("Opção inválida.")
             input("\nPressione ENTER para continuar")
 
@@ -159,13 +160,19 @@ def realizar_backup():
             return
 
         if not opcao.isdigit():
+            os.system("cls")
             print("\nOpção inválida. Por favor, tente novamente.")
+            input("\nPressione ENTER para continuar.")
+            
             continue
 
         indice = int(opcao)
 
         if not 1 <= indice <= len(mundos):
+            os.system("cls")
             print("\nOpção inválida. Por favor, tente novamente.")
+            input("\nPressione ENTER para continuar.")
+            
             continue
 
         os.system("cls")
