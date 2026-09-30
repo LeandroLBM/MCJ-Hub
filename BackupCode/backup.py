@@ -1,36 +1,8 @@
 import os
-import sys
 import shutil
 
 from pathlib import Path
 from datetime import datetime
-
-def menu_backup():
-    while True:
-        os.system("cls")
-
-        print("========== MENU BACKUP ==========\n")
-        print("0. Voltar para o menu principal")
-        print("1. Realizar backup do mundo")
-        print("2. Restaurar backup do mundo")
-
-        opcao = input("\nEscolha uma opção: ")
-
-        if opcao == "0":
-            return
-
-        elif opcao == "1":
-            realizar_backup()
-            break
-
-        elif opcao == "2":
-            restaurar_backup()
-            break
-
-        else:
-            os.system("cls")
-            print("Opção inválida.")
-            input("\nPressione ENTER para continuar")
 
 def copiar_com_progresso(origem, destino):
     arquivos = []
@@ -118,19 +90,19 @@ def realizar_backup():
 
     if not appdata:
         print("Não foi possível localizar a pasta AppData.")
-        return[]
+        return
 
     pasta_minecraft = Path(appdata) / ".minecraft"
     
     if not pasta_minecraft.is_dir():
         print("A pasta .Minecraft não foi encontrada.")
-        return[]
+        return
 
     pasta_mundos = pasta_minecraft / "saves"
 
     if not pasta_mundos.is_dir():
         print("A pasta saves não foi encontrada.")
-        return[]
+        return
 
     mundos = [
         pasta
@@ -230,7 +202,7 @@ def realizar_backup():
 
                 elif opcao_backup == "n":
                     print("\nOperação cancelada.")
-                    print("\nPressione ENTER para continuar.")
+                    input("\nPressione ENTER para continuar.")
                     cancelar_backup = True
                     break
 
@@ -266,7 +238,7 @@ def realizar_backup():
                 os.system("cls")
 
                 if tamanho_original != tamanho_backup:
-                    mostar_alerta()
+                    mostrar_alerta()
                     print("\n========== ALERTA DE BACKUP ==========")
                     print("\nO backup foi concluído, mas os tamanhos")
                     print("dos mundos não são iguais!")
@@ -334,10 +306,6 @@ def realizar_backup():
                     else:
                         print("\nOpção inválida.")
 
-def restaurar_backup():
-    print("restaurar menu")
-
-
 def calcular_tamanho(pasta):
     tamanho = 0
 
@@ -351,7 +319,7 @@ def formatar_tamanho(tamanho):
     
     return f"({tamanho_gb:.2f} GB) - [{tamanho:,} bytes]"
 
-def mostar_alerta():
+def mostrar_alerta():
     print(r"""
                           ████████                          
                         ██        ██                        
@@ -378,4 +346,4 @@ def mostar_alerta():
 """)
 
 if __name__ == "__main__":
-    menu_backup()
+    realizar_backup()
