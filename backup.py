@@ -31,6 +31,85 @@ def menu_backup():
             print("Opção inválida.")
             input("\nPressione ENTER para continuar")
 
+def copiar_com_progresso(origem, destino):
+    arquivos = []
+
+    for arquivo in origem.rglob("*"):
+        if arquivo.is_file():
+            arquivos.append(arquivo)
+
+    tamanho_total = sum(
+        arquivo.stat().st_size
+        for arquivo in arquivos
+    )
+
+    tamanho_copiado = 0
+
+    destino.mkdir(parents=True, exist_ok=True)
+
+    total_arquivos = len(arquivos)
+
+    print(f"Arquivos encontrados: {total_arquivos}")
+    print(f"Tamanho total: {formatar_tamanho(tamanho_total)}")
+    print()
+
+    for numero, arquivo in enumerate(arquivos, start=1):
+
+        caminho_relativo = arquivo.relative_to(origem)
+
+        destino_arquivo = destino / caminho_relativo
+
+        destino_arquivo.parent.mkdir(
+            parents=True,
+            exist_ok=True
+        )
+
+        shutil.copy2(
+            arquivo,
+            destino_arquivo
+        )
+
+        tamanho_arquivo = arquivo.stat().st_size
+
+        tamanho_copiado += tamanho_arquivo
+
+        porcentagem = (
+            tamanho_copiado / tamanho_total * 100
+            if tamanho_total > 0
+            else 100
+        )
+
+        barra_tamanho = 30
+
+        preenchido = int(
+            barra_tamanho * porcentagem / 100
+        )
+
+        barra = (
+            "█" * preenchido
+            + "░" * (barra_tamanho - preenchido)
+        )
+
+        tamanho_atual_gb = (
+            tamanho_copiado / (1024 ** 3)
+        )
+
+        tamanho_total_gb = (
+            tamanho_total / (1024 ** 3)
+        )
+
+        print(
+            f"\r[{barra}] "
+            f"{porcentagem:6.2f}% "
+            f"{tamanho_atual_gb:.2f} GB / "
+            f"{tamanho_total_gb:.2f} GB "
+            f"({numero}/{total_arquivos})",
+            end="",
+            flush=True
+        )
+
+    print()
+
 def realizar_backup():
     os.system("cls")
 
@@ -89,18 +168,26 @@ def realizar_backup():
             print("\nOpção inválida. Por favor, tente novamente.")
             continue
 
+        os.system("cls")
         mundo_escolhido = mundos[indice - 1]
 
         print(f"\nMundo selecionado: {mundo_escolhido.name}")
 
         pasta_destino = input(
             "\nInforme o caminho da pasta para salvar o backup: "
-        )
+        ).strip()
 
+        os.system("cls")
+        if not pasta_destino:
+            print("\nÉ obrigatório informar uma pasta de destino.")
+            input("\nPressione ENTER para continuar.")
+            continue
+
+        os.system("cls")
         pasta_destino = Path(pasta_destino)
 
         if not pasta_destino.is_dir():
-            print("\nA pasta informada não existe.")
+            print("\nA pasta informada não foi encontrada.")
             input("\nPressione ENTER para continuar.")
             continue
 
@@ -149,25 +236,76 @@ def realizar_backup():
         nome_backup = f"{mundo_escolhido.name} ({data_backup})"
         destino_backup = pasta_destino / nome_backup
 
+        nova_tentativa = False
+
         while True:
             try:
+                if nova_tentativa and destino_backup.exists():
+                    shutil.rmtree(destino_backup)
+
+                nova_tentativa = False
+
+                os.system("cls")
                 print("\nRealizando backup...")
 
-                shutil.copytree(
+                copiar_com_progresso(
                     mundo_escolhido,
                     destino_backup
                 )
+
                 tamanho_original = calcular_tamanho(mundo_escolhido)
                 tamanho_backup = calcular_tamanho(destino_backup)
+
+                os.system("cls")
+
+                if tamanho_original != tamanho_backup:
+                    mostar_alerta()
+                    print("\n========== ALERTA DE BACKUP ==========")
+                    print("\nO backup foi concluído, mas os tamanhos")
+                    print("dos mundos não são iguais!")
+                    print()
+                    print(f"Mundo Original: {mundo_escolhido.name}")
+                    print(
+                        f"Tamanho Original: "
+                        f"{formatar_tamanho(tamanho_original)}"
+                    )
+                    print()
+                    print(f"Backup: {destino_backup.name}")
+                    print(
+                        f"Tamanho do Backup: "
+                        f"{formatar_tamanho(tamanho_backup)}"
+                    )
+                    print()
+                    print("O backup pode estar incompleto ou corrompido.")
+
+                    while True:
+                        print("\n1. Tentar novamente")
+                        print("2. Cancelar operação")
+
+                        opcao_erro = input("\nEscolha uma opção: ")
+                        
+                        if opcao_erro == "1":
+                            nova_tentativa = True
+                            break
+
+                        elif opcao_erro == "2":
+                            return
+
+                        else:
+                            print("\nOpção inválida.")
+
+                    continue
 
                 print("\n========== BACKUP CONCLUÍDO ==========")
                 print(f"Mapa Original: {mundo_escolhido.name}")
                 print(f"Tamanho: {formatar_tamanho(tamanho_original)}")
                 print(f"Backup: {destino_backup.name}")
                 print(f"Tamanho: {formatar_tamanho(tamanho_backup)}")
+                print()
                 print(f"Local: {destino_backup}")
 
                 input("\nPressione ENTER para continuar.")
+
                 break
 
             except Exception as erro:
@@ -194,7 +332,7 @@ def restaurar_backup():
 
 
 def calcular_tamanho(pasta):
-    tamanho = 0    
+    tamanho = 0
 
     for arquivo in pasta.rglob("*"):
         if arquivo.is_file():
@@ -205,6 +343,32 @@ def formatar_tamanho(tamanho):
     tamanho_gb = tamanho / (1024 ** 3)
     
     return f"({tamanho_gb:.2f} GB) - [{tamanho:,} bytes]"
+
+def mostar_alerta():
+    print(r"""
+                          ████████                          
+                        ██        ██                        
+                      ██            ██                      
+                      ██            ██                      
+                    ██    ████████    ██                    
+                  ██    ████████████    ██                  
+                  ██    ████████████    ██                  
+                ██      ████████████      ██                
+              ██          ████████          ██              
+              ██          ████████          ██              
+            ██            ████████            ██            
+          ██                ████                ██          
+          ██                ████                ██          
+        ██                                        ██        
+      ██                    ████                    ██      
+      ██                  ████████                  ██      
+    ██                  ████████████                  ██    
+  ██                    ████████████                    ██  
+  ██                      ████████                      ██  
+  ██                        ████                        ██  
+    ██                                                ██    
+      ████████████████████████████████████████████████   
+""")
 
 if __name__ == "__main__":
     menu_backup()
