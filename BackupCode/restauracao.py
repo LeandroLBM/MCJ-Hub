@@ -131,10 +131,6 @@ def realizar_restauracao():
 
     print()
 
-    # =========================================================
-    # VERIFICAÇÃO DO MUNDO EXISTENTE
-    # =========================================================
-
     if mundo_existente.is_dir():
 
         tamanho_backup = calcular_tamanho(backup_escolhido)
@@ -208,10 +204,6 @@ def realizar_restauracao():
             else:
                 print("\nOpção inválida. Escolha s ou n.")
 
-    # =========================================================
-    # NÃO EXISTE MUNDO
-    # =========================================================
-
     else:
 
         tamanho_backup = calcular_tamanho(backup_escolhido)
@@ -221,10 +213,6 @@ def realizar_restauracao():
 
         print()
         print(f"Tamanho do backup: {formatar_tamanho(tamanho_backup)}")
-
-    # =========================================================
-    # CONFIRMAÇÃO DA RESTAURAÇÃO
-    # =========================================================
 
     while True:
 
@@ -256,9 +244,6 @@ def realizar_restauracao():
                     mundo_existente
                 )
 
-                # =================================================
-                # VALIDAÇÃO APÓS A RESTAURAÇÃO
-                # =================================================
 
                 tamanho_restaurado = calcular_tamanho(
                     mundo_existente
@@ -336,7 +321,3 @@ def realizar_restauracao():
         else:
 
             print("\nOpção inválida. Escolha s ou n.")
-
-
-if __name__ == "__main__":
-    realizar_restauracao()

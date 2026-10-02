@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="hzHb-pCX9oyfoG9qYIoK">
-    <mxGraphModel dx="3207" dy="1352" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="9233" dy="3128" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -333,6 +333,412 @@
         </mxCell>
         <mxCell id="gjakHe0F9RlJ6MSFEC0J-142" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="retornar ao inicio" vertex="1">
           <mxGeometry height="30" width="60" x="3200" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-9" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Aplicação por CMD" vertex="1">
+          <mxGeometry height="120" width="200" x="-80" y="-840" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Atualização de modificações" vertex="1">
+          <mxGeometry height="120" width="200" x="-80" y="-480" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Presets Menu" vertex="1">
+          <mxGeometry height="120" width="200" x="160" y="-660" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-22" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-13" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Gerenciador de mundos" vertex="1">
+          <mxGeometry height="120" width="200" x="-320" y="-660" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-10" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-11" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-12" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-8" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-20" y="-640" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-16" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-440" y="-740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-17" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-440" y="-460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-13" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-480" y="-640" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-27" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Criar Backups" vertex="1">
+          <mxGeometry height="120" width="200" x="-720" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-95" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-70">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Restaurar Backups" vertex="1">
+          <mxGeometry height="120" width="200" x="-720" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-33" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-32" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Realiza uma busca de arquivos disponíveis para copia na pasta&amp;nbsp;&lt;div&gt;(appdata/roaming/.minecraft/saves)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-1000" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-38" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Informa qual mundo deseja realizar uma copía" vertex="1">
+          <mxGeometry height="120" width="200" x="-1440" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-75" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-74" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa qual pasta deseja realizar uma copía" vertex="1">
+          <mxGeometry height="120" width="200" x="-1560" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-34" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1120" y="-840" />
+              <mxPoint x="-270" y="-840" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-35" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-32" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-29" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-32" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-1160" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-40" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-37" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Informa qual pasta deseja realizar a copía" vertex="1">
+          <mxGeometry height="120" width="200" x="-1720" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-85" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-84" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-39" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Realiza uma busca de arquivos com o mesmo nome do mundo selecionado&amp;nbsp;&lt;div&gt;na pasta informada&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-2000" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-89" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-43">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja excluir o arquivo existente e salvar o arquivo novo" vertex="1">
+          <mxGeometry height="120" width="200" x="-2420" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-47" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.499;entryY=0.019;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);entryPerimeter=0;" target="uQse3eAiiPWaurXBeu_u-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2520" y="-880" />
+              <mxPoint x="-220.17" y="-880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-90" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-43" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-2560" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-92" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Na pasta informada pelo usuário. Se houver uma pasta com mesmo nome, a plicação exclui e salva uma copía nova. Se não houver, a aplicação salva uma copía.&lt;br&gt;(Ambas o nome do arquivo é modificado colocando a data que foi gerado a copía)" vertex="1">
+          <mxGeometry height="120" width="200" x="-2840" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-54" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-53" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Aplicação verifica se a pasta copiada tem o mesmo tamanho de arquivos que a pasta original da&amp;nbsp;&lt;div&gt;(appdata/roaming/.minecraft/saves)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" x="-3120" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-57" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-55">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-4040" y="-740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-58" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-56">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3240" y="-880" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-53" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-3280" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-60" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-55" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Informa que a copía foi realizada com sucesso" vertex="1">
+          <mxGeometry height="120" width="200" x="-4240" y="-800" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-93" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-56" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-65">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-56" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="exibe um alerta informando divergencia nos arquivos" vertex="1">
+          <mxGeometry height="120" width="200" x="-3520" y="-940" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-59" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;fillColor=light-dark(#000000,#FF0000);fontColor=#ffffff;strokeColor=light-dark(#000000,#FF0000);" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-4400" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-62" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-61" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;aspect=fixed;strokeColor=light-dark(#000000,#00FF00);fillColor=light-dark(#000000,#00FF00);" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-20" y="-1000" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-68" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-66" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-65" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja realizar a mesma copía novamente" vertex="1">
+          <mxGeometry height="120" width="200" x="-3800" y="-940" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-69" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#FF0000);entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3920" y="-960" />
+              <mxPoint x="-170" y="-960" />
+            </Array>
+            <mxPoint x="-130" y="-680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-115" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-114">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-66" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-3960" y="-920" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-72" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-70" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-71" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-70" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa a pasta que está salvo os mundos" vertex="1">
+          <mxGeometry height="120" width="200" x="-1000" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-73" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-71" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-31" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-71" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Aplicação realiza uma busca e informa as pastas dispiníveis para copía" vertex="1">
+          <mxGeometry height="120" width="200" x="-1290" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-78" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-74" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-77" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-74" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Aplicação informa qual pasta foi selecionada e pergunta para o usuário se deseja realizar a restauração do mundo" vertex="1">
+          <mxGeometry height="120" width="200" x="-1840" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-79" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-1960" y="-360" />
+              <mxPoint x="-270" y="-360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-81" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-77" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-80" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-77" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-2000" y="-500" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-83" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-82" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-80" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Programa realiza uma busca para verificar se já existe mundos com o mesmo nome na pasta&lt;br&gt;(appdata/roaming/.minecraft/saves" vertex="1">
+          <mxGeometry height="120" width="200" x="-2280" y="-520" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-96" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-94">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2400" y="-579.97" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-100" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-101">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2400" y="50" />
+            </Array>
+            <mxPoint x="-2480" y="-340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-82" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-2440" y="-500" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-87" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2200" y="-740" />
+              <mxPoint x="-2200" y="-740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-91" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-84" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-48">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2120" y="-660" />
+              <mxPoint x="-2740" y="-660" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-84" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-2160" y="-780" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-103" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-102" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-94" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Aplicação realiza uma copía da pasta solicitada pelo usuário" vertex="1">
+          <mxGeometry height="120" width="200" x="-2680" y="-640" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-131" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-122">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja excluir o save ou, deseja realizar uma nova copía com nome diferente ou se deseja realizar cancelar a operação" vertex="1">
+          <mxGeometry height="120" width="200" x="-2680" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-105" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-102" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-104" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-102" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Aplicação verifica se os arquivos tem o mesmo tamanho" vertex="1">
+          <mxGeometry height="120" width="200" x="-2960" y="-640" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-107" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-108" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-104" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-106">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-104" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-3120" y="-620" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-110" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-106" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-106" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="exibe um alerta informando divergencia nos arquivos" vertex="1">
+          <mxGeometry height="120" width="200" x="-3320" y="-440" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-112" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-111">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-109" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Usuário informa se deseja realizar a mesma copía novamente" vertex="1">
+          <mxGeometry height="120" width="200" x="-3600" y="-440" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-118" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-117">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-121" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-111" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3720" y="-280" />
+              <mxPoint x="-620" y="-280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-111" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-3760" y="-420" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-116" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-114" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="uQse3eAiiPWaurXBeu_u-51">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-4140" y="-810" />
+              <mxPoint x="-3020" y="-810" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-114" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Aplicação tenta realizar o mesmo processo solicitado pelo usuário" vertex="1">
+          <mxGeometry height="120" width="200" x="-4240" y="-940" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-119" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-117" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-102">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3939.97" y="-479.97" />
+              <mxPoint x="-2859.97" y="-479.97" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-117" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Aplicação tenta realizar o mesmo processo solicitado pelo usuário" vertex="1">
+          <mxGeometry height="120" width="200" x="-4040" y="-440" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-126" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-125">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-129" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-127">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2800" y="-150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-132" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-122" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-15">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-2800" y="120" />
+              <mxPoint x="-570" y="120" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-122" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-2840" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-135" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-125" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-125" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Aplicação realiza uma copía do mundo e adiciona um número para diferenciar os saves" vertex="1">
+          <mxGeometry height="120" width="200" x="-3120" y="-10" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-134" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-127" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-133">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-127" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Aplicação exclui o save antigo e realiza a copía solicitada pelo usuário" vertex="1">
+          <mxGeometry height="120" width="200" x="-3120" y="-210" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-137" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-133" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="uQse3eAiiPWaurXBeu_u-136">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-133" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=0" value="Aplicação verifica se os arquivos tem o mesmo tamanho" vertex="1">
+          <mxGeometry height="120" width="200" x="-3480" y="-120" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-138" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#00FF00);" target="uQse3eAiiPWaurXBeu_u-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-140" edge="1" parent="1" source="uQse3eAiiPWaurXBeu_u-136" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeColor=light-dark(#000000,#FF0000);" target="uQse3eAiiPWaurXBeu_u-106">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-3600" y="-240" />
+              <mxPoint x="-3220" y="-240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-136" parent="1" style="rhombus;whiteSpace=wrap;html=1;shapeInside=1;" value="" vertex="1">
+          <mxGeometry height="80" width="80" x="-3640" y="-100" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-141" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Exclussão&lt;br&gt;&amp;nbsp;+ Restauração" vertex="1">
+          <mxGeometry height="30" width="60" x="-2890" y="-190" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-142" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Restauração +&lt;div&gt;Modificação&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="60" x="-2910" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="uQse3eAiiPWaurXBeu_u-143" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Cancelamento da Operação" vertex="1">
+          <mxGeometry height="30" width="60" x="-2790" y="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

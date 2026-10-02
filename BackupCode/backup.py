@@ -230,6 +230,3 @@ def realizar_backup():
 
                     else:
                         print("\nOpção inválida.")
-
-if __name__ == "__main__":
-    realizar_backup()
