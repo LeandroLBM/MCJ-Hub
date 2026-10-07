@@ -6,9 +6,14 @@ from .validacoes import calcular_tamanho
 from .validacoes import formatar_tamanho
 from .validacoes import progresso
 from .validacoes import mostrar_alerta
+from PresetsCode.acoes import registrar_acao
 
 
-def realizar_restauracao():
+def realizar_restauracao(gravar_preset=False, acoes_preset=None):
+
+    if acoes_preset is None:
+        acoes_preset = []
+
     os.system("cls")
 
     appdata = os.getenv("APPDATA")
@@ -59,6 +64,13 @@ def realizar_restauracao():
     ).strip()
 
     if pasta_backup == "0":
+
+        if gravar_preset:
+            registrar_acao(
+                acoes_preset,
+                "voltar"
+            )
+
         return
 
     if not pasta_backup:
@@ -72,6 +84,15 @@ def realizar_restauracao():
         print("\nA pasta informada não foi encontrada.")
         input("\nPressione ENTER para continuar.")
         return
+
+    if gravar_preset:
+        registrar_acao(
+            acoes_preset,
+            "pasta_backups",
+            {
+                "caminho": str(pasta_backup)
+            }
+        )
 
     backups = [
         pasta
@@ -96,6 +117,13 @@ def realizar_restauracao():
         opcao = input("\nEscolha um backup: ").strip()
 
         if opcao == "0":
+
+            if gravar_preset:
+                registrar_acao(
+                    acoes_preset,
+                    "voltar"
+                )
+
             return
 
         if not opcao.isdigit():
@@ -111,6 +139,15 @@ def realizar_restauracao():
             continue
 
         backup_escolhido = backups[indice - 1]
+
+        if gravar_preset:
+            registrar_acao(
+                acoes_preset,
+                "selecao_backup",
+                {
+                    "backup": backup_escolhido.name
+                }
+            )
 
         break
 
@@ -138,19 +175,18 @@ def realizar_restauracao():
 
         print("⚠️ JÁ EXISTE UM MUNDO COM ESTE NOME!\n")
 
-        print(f"Mundo existente:")
+        print("Mundo existente:")
         print(f"  {mundo_existente.name}")
         print(f"  Tamanho: {formatar_tamanho(tamanho_mundo)}")
 
         print()
 
-        print(f"Backup:")
+        print("Backup:")
         print(f"  {backup_escolhido.name}")
         print(f"  Tamanho: {formatar_tamanho(tamanho_backup)}")
 
         print("\n--------------------------------------")
 
-        # Compara os tamanhos antes da exclusão
         if tamanho_mundo != tamanho_backup:
             mostrar_alerta(
                 "O tamanho do mundo existente é diferente "
@@ -173,9 +209,20 @@ def realizar_restauracao():
         print("(s/n)")
 
         while True:
-            opcao_existente = input("\nEscolha uma opção: ").strip().lower()
+            opcao_existente = input(
+                "\nEscolha uma opção: "
+            ).strip().lower()
 
             if opcao_existente == "s":
+
+                if gravar_preset:
+                    registrar_acao(
+                        acoes_preset,
+                        "mundo_existente",
+                        {
+                            "resposta": "s"
+                        }
+                    )
 
                 try:
                     shutil.rmtree(mundo_existente)
@@ -196,6 +243,15 @@ def realizar_restauracao():
                     return
 
             elif opcao_existente == "n":
+
+                if gravar_preset:
+                    registrar_acao(
+                        acoes_preset,
+                        "mundo_existente",
+                        {
+                            "resposta": "n"
+                        }
+                    )
 
                 print("\nOperação cancelada.")
                 input("\nPressione ENTER para continuar.")
@@ -218,9 +274,20 @@ def realizar_restauracao():
 
         print("\nDeseja restaurar este mundo? (s/n)")
 
-        opcao_restaurar = input("\nEscolha uma opção: ").strip().lower()
+        opcao_restaurar = input(
+            "\nEscolha uma opção: "
+        ).strip().lower()
 
         if opcao_restaurar == "s":
+
+            if gravar_preset:
+                registrar_acao(
+                    acoes_preset,
+                    "confirmacao_restauracao",
+                    {
+                        "resposta": "s"
+                    }
+                )
 
             try:
                 os.system("cls")
@@ -230,7 +297,9 @@ def realizar_restauracao():
                 print(f"Backup: {backup_escolhido.name}")
                 print()
 
-                tamanho_backup = calcular_tamanho(backup_escolhido)
+                tamanho_backup = calcular_tamanho(
+                    backup_escolhido
+                )
 
                 print(
                     f"Tamanho do backup: "
@@ -243,7 +312,6 @@ def realizar_restauracao():
                     backup_escolhido,
                     mundo_existente
                 )
-
 
                 tamanho_restaurado = calcular_tamanho(
                     mundo_existente
@@ -313,6 +381,15 @@ def realizar_restauracao():
                 return
 
         elif opcao_restaurar == "n":
+
+            if gravar_preset:
+                registrar_acao(
+                    acoes_preset,
+                    "confirmacao_restauracao",
+                    {
+                        "resposta": "n"
+                    }
+                )
 
             print("\nOperação cancelada.")
             input("\nPressione ENTER para continuar.")

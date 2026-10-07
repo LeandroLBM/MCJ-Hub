@@ -2,6 +2,7 @@ import os
 
 from .backup import realizar_backup
 from .restauracao import realizar_restauracao
+from PresetsCode.acoes import registrar_acao
 
 def menu_backup(gravar_preset=False, acoes_preset=None):
 
@@ -22,22 +23,56 @@ def menu_backup(gravar_preset=False, acoes_preset=None):
                     return
 
         if opcao == "0":
+
+            if gravar_preset:
+                registrar_acao(
+                    acoes_preset,
+                    "menu",
+                    {
+                        "menu": "Gerenciamento de mundos",
+                        "opcao": "0",
+                        "descrição": "Voltar para o menu principal"                    
+                    }
+                )
+            
             return
 
         elif opcao == "1":
 
             if gravar_preset:
-                acoes_preset.append("Backup")
+                registrar_acao(
+                     acoes_preset,
+                     "menu",
+                    {
+                        "menu": "Gerenciamento de mundos",
+                        "opcao": "1",
+                        "descricao": "Realizar backup do mundo"                    
+                    }
+                )
             
-            realizar_backup()
+            realizar_backup(
+                 acoes_preset=acoes_preset,
+                 gravar_preset=gravar_preset
+            )
             break
 
         elif opcao == "2":
 
             if gravar_preset:
-                acoes_preset.append("Restauração")
+                registrar_acao(
+                    acoes_preset,
+                    "menu",
+                    {
+                        "menu": "Gerenciamento de mundos",
+                        "opcao": "2",
+                        "descricao": "Restaurar backup do mundo"                    
+                    }
+                )
             
-            realizar_restauracao()
+            realizar_restauracao(
+                 acoes_preset=acoes_preset,
+                 gravar_preset=gravar_preset
+            )
             break
 
         else:

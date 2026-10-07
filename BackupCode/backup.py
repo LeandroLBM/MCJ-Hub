@@ -7,8 +7,13 @@ from .validacoes import calcular_tamanho
 from .validacoes import formatar_tamanho
 from .validacoes import progresso
 from .validacoes import mostrar_alerta
+from PresetsCode.acoes import registrar_acao
 
-def realizar_backup():
+
+def realizar_backup(gravar_preset=False, acoes_preset=None):
+    if acoes_preset is None:
+        acoes_preset = []
+
     os.system("cls")
 
     appdata = os.getenv("APPDATA")
@@ -18,7 +23,7 @@ def realizar_backup():
         return
 
     pasta_minecraft = Path(appdata) / ".minecraft"
-    
+
     if not pasta_minecraft.is_dir():
         print("A pasta .Minecraft não foi encontrada.")
         return
@@ -37,8 +42,8 @@ def realizar_backup():
 
     if not mundos:
         print("nenhum mundo encontrado.")
-        return[]
-    
+        return
+
     while True:
         os.system("cls")
 
@@ -48,19 +53,26 @@ def realizar_backup():
         for indice, mundo in enumerate(mundos, start=1):
             tamanho = calcular_tamanho(mundo)
             tamanho_formatado = formatar_tamanho(tamanho)
-        
+
             print(f"{indice}.{mundo.name} - {tamanho_formatado}")
 
         opcao = input("\nEscolha uma opção: ")
 
         if opcao == "0":
+
+            if gravar_preset:
+                registrar_acao(
+                    acoes_preset,
+                    "voltar"
+                )
+
             return
 
         if not opcao.isdigit():
             os.system("cls")
             print("\nOpção inválida. Por favor, tente novamente.")
             input("\nPressione ENTER para continuar.")
-            
+
             continue
 
         indice = int(opcao)
@@ -69,7 +81,7 @@ def realizar_backup():
             os.system("cls")
             print("\nOpção inválida. Por favor, tente novamente.")
             input("\nPressione ENTER para continuar.")
-            
+
             continue
 
         os.system("cls")
@@ -77,23 +89,41 @@ def realizar_backup():
 
         print(f"\nMundo selecionado: {mundo_escolhido.name}")
 
+        if gravar_preset:
+            registrar_acao(
+                acoes_preset,
+                "selecao_mundo",
+                {
+                    "mundo": mundo_escolhido.name
+                }
+            )
+
         pasta_destino = input(
             "\nInforme o caminho da pasta para salvar o backup: "
         ).strip()
 
         os.system("cls")
+
         if not pasta_destino:
             print("\nÉ obrigatório informar uma pasta de destino.")
             input("\nPressione ENTER para continuar.")
             continue
 
-        os.system("cls")
         pasta_destino = Path(pasta_destino)
 
         if not pasta_destino.is_dir():
             print("\nA pasta informada não foi encontrada.")
             input("\nPressione ENTER para continuar.")
             continue
+
+        if gravar_preset:
+            registrar_acao(
+                acoes_preset,
+                "destino",
+                {
+                    "caminho": str(pasta_destino)
+                }
+            )
 
         data_backup = datetime.now().strftime("%d_%m_%Y")
         nome_mundo = mundo_escolhido.name
@@ -117,15 +147,35 @@ def realizar_backup():
                 opcao_backup = input(
                     "\nDeseja excluir os backups existentes e criar um novo? (n/s): "
                 ).strip().lower()
-            
+
                 if opcao_backup == "s":
+
+                    if gravar_preset:
+                        registrar_acao(
+                            acoes_preset,
+                            "confirmacao_backups_existentes",
+                            {
+                                "resposta": "s"
+                            }
+                        )
+
                     for backup in backup_existentes:
                         shutil.rmtree(backup)
-                
+
                     print("\nBackups anteriores excluídos.")
                     break
 
                 elif opcao_backup == "n":
+
+                    if gravar_preset:
+                        registrar_acao(
+                            acoes_preset,
+                            "confirmacao_backups_existentes",
+                            {
+                                "resposta": "n"
+                            }
+                        )
+
                     print("\nOperação cancelada.")
                     input("\nPressione ENTER para continuar.")
                     cancelar_backup = True
@@ -187,12 +237,32 @@ def realizar_backup():
                         print("2. Cancelar operação")
 
                         opcao_erro = input("\nEscolha uma opção: ")
-                        
+
                         if opcao_erro == "1":
+
+                            if gravar_preset:
+                                registrar_acao(
+                                    acoes_preset,
+                                    "erro_backup",
+                                    {
+                                        "opcao": "Tentar novamente"
+                                    }
+                                )
+
                             nova_tentativa = True
                             break
 
                         elif opcao_erro == "2":
+
+                            if gravar_preset:
+                                registrar_acao(
+                                    acoes_preset,
+                                    "erro_backup",
+                                    {
+                                        "opcao": "Cancelar operação"
+                                    }
+                                )
+
                             return
 
                         else:
@@ -223,9 +293,29 @@ def realizar_backup():
                     opcao_erro = input("\nEscolha uma opção: ")
 
                     if opcao_erro == "1":
+
+                        if gravar_preset:
+                            registrar_acao(
+                                acoes_preset,
+                                "erro_backup",
+                                {
+                                    "opcao": "Tentar novamente"
+                                }
+                            )
+
                         break
 
                     elif opcao_erro == "2":
+
+                        if gravar_preset:
+                            registrar_acao(
+                                acoes_preset,
+                                "erro_backup",
+                                {
+                                    "opcao": "Cancelar operação"
+                                }
+                            )
+
                         return
 
                     else:
