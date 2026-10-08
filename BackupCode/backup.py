@@ -1,37 +1,115 @@
 import os
 import shutil
+import json
 
 from pathlib import Path
 from datetime import datetime
-from .validacoes import calcular_tamanho
-from .validacoes import formatar_tamanho
-from .validacoes import progresso
-from .validacoes import mostrar_alerta
+
+from .validacoes import (
+    calcular_tamanho,
+    formatar_tamanho,
+    progresso
+)
 from PresetsCode.acoes import registrar_acao
 
 
-def realizar_backup(gravar_preset=False, acoes_preset=None):
+def carregar_diretorios():
+
+    pasta_diretorios = (
+        Path("MJH_Presets") /
+        "Diretórios"
+    )
+
+    if not pasta_diretorios.is_dir():
+
+        return []
+
+    diretorios = []
+
+    arquivos = sorted(
+        arquivo
+        for arquivo in pasta_diretorios.iterdir()
+        if arquivo.is_file()
+        and arquivo.suffix.lower() == ".json"
+    )
+
+    for arquivo in arquivos:
+
+        try:
+
+            with open(
+                arquivo,
+                "r",
+                encoding="utf-8"
+            ) as json_file:
+
+                dados = json.load(json_file)
+
+            nome = dados.get("nome")
+            caminho = dados.get("caminho")
+
+            if caminho:
+
+                if not nome:
+
+                    nome = arquivo.stem
+
+                diretorios.append(
+                    {
+                        "nome": nome,
+                        "caminho": caminho
+                    }
+                )
+
+        except Exception:
+
+            continue
+
+    return diretorios
+
+
+def realizar_backup(
+    gravar_preset=False,
+    acoes_preset=None,
+    modo_execucao=False,
+    acoes_execucao=None
+):
+
     if acoes_preset is None:
+
         acoes_preset = []
 
-    os.system("cls")
+    if acoes_execucao is None:
+
+        acoes_execucao = iter([])
 
     appdata = os.getenv("APPDATA")
 
     if not appdata:
-        print("Não foi possível localizar a pasta AppData.")
+
+        print("\nNão foi possível localizar a pasta AppData.")
+
+        input("\nPressione ENTER para continuar.")
+
         return
 
     pasta_minecraft = Path(appdata) / ".minecraft"
-
-    if not pasta_minecraft.is_dir():
-        print("A pasta .Minecraft não foi encontrada.")
-        return
-
     pasta_mundos = pasta_minecraft / "saves"
 
+    if not pasta_minecraft.is_dir():
+
+        print("\nA pasta .minecraft não foi encontrada.")
+
+        input("\nPressione ENTER para continuar.")
+
+        return
+
     if not pasta_mundos.is_dir():
-        print("A pasta saves não foi encontrada.")
+
+        print("\nA pasta de mundos não foi encontrada.")
+
+        input("\nPressione ENTER para continuar.")
+
         return
 
     mundos = [
@@ -41,282 +119,718 @@ def realizar_backup(gravar_preset=False, acoes_preset=None):
     ]
 
     if not mundos:
-        print("nenhum mundo encontrado.")
+
+        print("\nNenhum mundo encontrado.")
+
+        input("\nPressione ENTER para continuar.")
+
         return
 
     while True:
+
         os.system("cls")
 
         print("========== MUNDOS ENCONTRADOS ==========\n")
-        print("0.Voltar")
+        print("0. Voltar")
 
-        for indice, mundo in enumerate(mundos, start=1):
+        for indice, mundo in enumerate(
+            mundos,
+            start=1
+        ):
+
             tamanho = calcular_tamanho(mundo)
-            tamanho_formatado = formatar_tamanho(tamanho)
 
-            print(f"{indice}.{mundo.name} - {tamanho_formatado}")
+            print(
+                f"{indice}. "
+                f"{mundo.name} - "
+                f"{formatar_tamanho(tamanho)}"
+            )
 
-        opcao = input("\nEscolha uma opção: ")
+        if modo_execucao:
 
-        if opcao == "0":
+            try:
+
+                acao = next(
+                    acoes_execucao
+                )
+
+            except StopIteration:
+
+                print(
+                    "\nO preset terminou antes "
+                    "de selecionar o mundo."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            if acao.get("tipo") == "voltar":
+
+                return
+
+            if acao.get(
+                "tipo"
+            ) != "selecao_mundo":
+
+                print("\nErro no preset.")
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            dados = acao.get(
+                "dados",
+                {}
+            )
+
+            nome_mundo = dados.get(
+                "mundo"
+            )
+
+            mundo_escolhido = next(
+                (
+                    mundo
+                    for mundo in mundos
+                    if mundo.name == nome_mundo
+                ),
+                None
+            )
+
+            if mundo_escolhido is None:
+
+                print(
+                    f"\nO mundo '{nome_mundo}' "
+                    "não foi encontrado."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            print(
+                f"\nEscolha uma opção: "
+                f"{mundos.index(mundo_escolhido) + 1}"
+            )
+
+        else:
+
+            opcao = input(
+                "\nEscolha uma opção: "
+            ).strip()
+
+            if opcao == "0":
+
+                if gravar_preset:
+
+                    registrar_acao(
+                        acoes_preset,
+                        "voltar"
+                    )
+
+                return
+
+            if not opcao.isdigit():
+
+                print("\nOpção inválida.")
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                continue
+
+            indice = int(opcao)
+
+            if not 1 <= indice <= len(mundos):
+
+                print("\nOpção inválida.")
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                continue
+
+            mundo_escolhido = mundos[
+                indice - 1
+            ]
 
             if gravar_preset:
+
                 registrar_acao(
                     acoes_preset,
-                    "voltar"
+                    "selecao_mundo",
+                    {
+                        "mundo": mundo_escolhido.name
+                    }
                 )
+
+        print(
+            f"\nMundo selecionado: "
+            f"{mundo_escolhido.name}"
+        )
+
+        break
+
+    # ==================================================
+    # SELEÇÃO DO DESTINO
+    # ==================================================
+
+    if modo_execucao:
+
+        try:
+
+            acao = next(
+                acoes_execucao
+            )
+
+        except StopIteration:
+
+            print(
+                "\nO preset terminou antes "
+                "de informar o destino."
+            )
+
+            input(
+                "\nPressione ENTER para continuar."
+            )
 
             return
 
-        if not opcao.isdigit():
-            os.system("cls")
-            print("\nOpção inválida. Por favor, tente novamente.")
-            input("\nPressione ENTER para continuar.")
+        if acao.get(
+            "tipo"
+        ) != "destino":
 
-            continue
+            print("\nErro no preset.")
 
-        indice = int(opcao)
-
-        if not 1 <= indice <= len(mundos):
-            os.system("cls")
-            print("\nOpção inválida. Por favor, tente novamente.")
-            input("\nPressione ENTER para continuar.")
-
-            continue
-
-        os.system("cls")
-        mundo_escolhido = mundos[indice - 1]
-
-        print(f"\nMundo selecionado: {mundo_escolhido.name}")
-
-        if gravar_preset:
-            registrar_acao(
-                acoes_preset,
-                "selecao_mundo",
-                {
-                    "mundo": mundo_escolhido.name
-                }
+            input(
+                "\nPressione ENTER para continuar."
             )
 
-        pasta_destino = input(
-            "\nInforme o caminho da pasta para salvar o backup: "
-        ).strip()
+            return
 
-        os.system("cls")
+        dados = acao.get(
+            "dados",
+            {}
+        )
 
-        if not pasta_destino:
-            print("\nÉ obrigatório informar uma pasta de destino.")
-            input("\nPressione ENTER para continuar.")
-            continue
+        caminho_destino = dados.get(
+            "caminho"
+        )
 
-        pasta_destino = Path(pasta_destino)
+        if not caminho_destino:
 
-        if not pasta_destino.is_dir():
-            print("\nA pasta informada não foi encontrada.")
-            input("\nPressione ENTER para continuar.")
-            continue
+            print(
+                "\nO preset não possui um caminho "
+                "de destino válido."
+            )
+
+            input(
+                "\nPressione ENTER para continuar."
+            )
+
+            return
+
+        pasta_destino = Path(
+            caminho_destino
+        )
+
+        print(
+            f"\nDestino selecionado: "
+            f"{caminho_destino}"
+        )
+
+    else:
+
+        diretorios = carregar_diretorios()
+
+        while True:
+
+            os.system("cls")
+
+            print(
+                "========== DESTINO DO BACKUP ==========\n"
+            )
+
+            if diretorios:
+
+                print("Diretórios salvos:\n")
+
+                for indice, diretorio in enumerate(
+                    diretorios,
+                    start=1
+                ):
+
+                    print(
+                        f"{indice}. "
+                        f"{diretorio['nome']} - "
+                        f"{diretorio['caminho']}"
+                    )
+
+            else:
+
+                print(
+                    "Nenhum diretório salvo."
+                )
+
+            print("\n0. Voltar")
+
+            entrada = input(
+                "\nInforme o número do diretório "
+                "ou digite um novo caminho: "
+            ).strip()
+
+            # VOLTAR
+            if entrada == "0":
+
+                if gravar_preset:
+
+                    registrar_acao(
+                        acoes_preset,
+                        "voltar"
+                    )
+
+                return
+
+            # NÚMERO = DIRETÓRIO SALVO
+            if entrada.isdigit():
+
+                indice = int(entrada)
+
+                if not 1 <= indice <= len(
+                    diretorios
+                ):
+
+                    print(
+                        "\nDiretório inválido."
+                    )
+
+                    input(
+                        "\nPressione ENTER para continuar."
+                    )
+
+                    continue
+
+                diretorio_escolhido = (
+                    diretorios[indice - 1]
+                )
+
+                caminho_destino = (
+                    diretorio_escolhido[
+                        "caminho"
+                    ]
+                )
+
+                pasta_destino = Path(
+                    caminho_destino
+                )
+
+                print(
+                    f"\nDiretório selecionado: "
+                    f"{diretorio_escolhido['nome']}"
+                )
+
+                break
+
+            # TEXTO = CAMINHO INFORMADO MANUALMENTE
+            caminho_destino = entrada
+
+            if not caminho_destino:
+
+                print(
+                    "\nO caminho não pode estar vazio."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                continue
+
+            pasta_destino = Path(
+                caminho_destino
+            )
+
+            if not pasta_destino.is_dir():
+
+                print(
+                    "\nO diretório informado "
+                    "não existe."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                continue
+
+            break
 
         if gravar_preset:
+
             registrar_acao(
                 acoes_preset,
                 "destino",
                 {
-                    "caminho": str(pasta_destino)
+                    "caminho": caminho_destino
                 }
             )
 
-        data_backup = datetime.now().strftime("%d_%m_%Y")
-        nome_mundo = mundo_escolhido.name
+    if not pasta_destino.is_dir():
 
-        backup_existentes = [
-            pasta
-            for pasta in pasta_destino.iterdir()
-            if pasta.is_dir()
-            and pasta.name.startswith(f"{nome_mundo} (")
-        ]
+        print(
+            "\nA pasta de destino não existe."
+        )
 
-        cancelar_backup = False
+        input(
+            "\nPressione ENTER para continuar."
+        )
 
-        if backup_existentes:
-            print("\nJá existem backups deste mundo:")
+        return
 
-            for backup in backup_existentes:
-                print(f"- {backup.name}")
+    data_backup = datetime.now().strftime(
+        "%d_%m_%Y"
+    )
 
-            while True:
-                opcao_backup = input(
-                    "\nDeseja excluir os backups existentes e criar um novo? (n/s): "
-                ).strip().lower()
+    nome_backup = (
+        f"{mundo_escolhido.name} "
+        f"({data_backup})"
+    )
 
-                if opcao_backup == "s":
+    destino_backup = (
+        pasta_destino /
+        nome_backup
+    )
 
-                    if gravar_preset:
-                        registrar_acao(
-                            acoes_preset,
-                            "confirmacao_backups_existentes",
-                            {
-                                "resposta": "s"
-                            }
-                        )
+    backups_existentes = [
+        pasta
+        for pasta in pasta_destino.iterdir()
+        if pasta.is_dir()
+        and pasta.name.startswith(
+            f"{mundo_escolhido.name} ("
+        )
+    ]
 
-                    for backup in backup_existentes:
-                        shutil.rmtree(backup)
+    if backups_existentes:
 
-                    print("\nBackups anteriores excluídos.")
-                    break
+        print(
+            "\nBackups existentes encontrados:\n"
+        )
 
-                elif opcao_backup == "n":
+        for backup in backups_existentes:
 
-                    if gravar_preset:
-                        registrar_acao(
-                            acoes_preset,
-                            "confirmacao_backups_existentes",
-                            {
-                                "resposta": "n"
-                            }
-                        )
+            print(
+                f"- {backup.name}"
+            )
 
-                    print("\nOperação cancelada.")
-                    input("\nPressione ENTER para continuar.")
-                    cancelar_backup = True
-                    break
+        if modo_execucao:
 
-                else:
-                    print("\nOpção inválida. Digite (s) ou (n).")
-
-        if cancelar_backup:
-            continue
-
-        nome_backup = f"{mundo_escolhido.name} ({data_backup})"
-        destino_backup = pasta_destino / nome_backup
-
-        nova_tentativa = False
-
-        while True:
             try:
-                if nova_tentativa and destino_backup.exists():
-                    shutil.rmtree(destino_backup)
 
-                nova_tentativa = False
-
-                os.system("cls")
-                print("\nRealizando backup...")
-
-                progresso(
-                    mundo_escolhido,
-                    destino_backup
+                acao = next(
+                    acoes_execucao
                 )
 
-                tamanho_original = calcular_tamanho(mundo_escolhido)
-                tamanho_backup = calcular_tamanho(destino_backup)
+            except StopIteration:
 
-                os.system("cls")
+                print(
+                    "\nO preset não possui confirmação "
+                    "para os backups existentes."
+                )
 
-                if tamanho_original != tamanho_backup:
-                    mostrar_alerta()
-                    print("\n========== ALERTA DE BACKUP ==========")
-                    print("\nO backup foi concluído, mas os tamanhos")
-                    print("dos mundos não são iguais!")
-                    print()
-                    print(f"Mundo Original: {mundo_escolhido.name}")
-                    print(
-                        f"Tamanho Original: "
-                        f"{formatar_tamanho(tamanho_original)}"
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            if acao.get(
+                "tipo"
+            ) != "confirmacao_backups_existentes":
+
+                print(
+                    "\nErro no preset."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            dados = acao.get(
+                "dados",
+                {}
+            )
+
+            confirmacao = dados.get(
+                "resposta"
+            )
+
+            print(
+                "\nDeseja excluir os backups existentes "
+                "e criar um novo? (n/s): "
+                f"{confirmacao}"
+            )
+
+        else:
+
+            confirmacao = input(
+                "\nDeseja excluir os backups existentes "
+                "e criar um novo? (n/s): "
+            ).strip().lower()
+
+            if gravar_preset:
+
+                registrar_acao(
+                    acoes_preset,
+                    "confirmacao_backups_existentes",
+                    {
+                        "resposta": confirmacao
+                    }
+                )
+
+        if confirmacao == "s":
+
+            try:
+
+                for backup in backups_existentes:
+
+                    shutil.rmtree(
+                        backup
                     )
-                    print()
-                    print(f"Backup: {destino_backup.name}")
-                    print(
-                        f"Tamanho do Backup: "
-                        f"{formatar_tamanho(tamanho_backup)}"
-                    )
-                    print()
-                    print("O backup pode estar incompleto ou corrompido.")
-
-                    while True:
-                        print("\n1. Tentar novamente")
-                        print("2. Cancelar operação")
-
-                        opcao_erro = input("\nEscolha uma opção: ")
-
-                        if opcao_erro == "1":
-
-                            if gravar_preset:
-                                registrar_acao(
-                                    acoes_preset,
-                                    "erro_backup",
-                                    {
-                                        "opcao": "Tentar novamente"
-                                    }
-                                )
-
-                            nova_tentativa = True
-                            break
-
-                        elif opcao_erro == "2":
-
-                            if gravar_preset:
-                                registrar_acao(
-                                    acoes_preset,
-                                    "erro_backup",
-                                    {
-                                        "opcao": "Cancelar operação"
-                                    }
-                                )
-
-                            return
-
-                        else:
-                            print("\nOpção inválida.")
-
-                    continue
-
-                print("\n========== BACKUP CONCLUÍDO ==========")
-                print(f"Mapa Original: {mundo_escolhido.name}")
-                print(f"Tamanho: {formatar_tamanho(tamanho_original)}")
-                print(f"Backup: {destino_backup.name}")
-                print(f"Tamanho: {formatar_tamanho(tamanho_backup)}")
-                print()
-                print(f"Local: {destino_backup}")
-
-                input("\nPressione ENTER para continuar.")
-
-                break
 
             except Exception as erro:
-                print("\nERRO AO REALIZAR O BACKUP!")
-                print(f"Detalhes: {erro}")
 
-                while True:
-                    print("\n1. Tentar novamente")
-                    print("2. Cancelar operação")
+                print(
+                    "\nNão foi possível excluir "
+                    "os backups existentes."
+                )
 
-                    opcao_erro = input("\nEscolha uma opção: ")
+                print(
+                    f"Detalhes: {erro}"
+                )
 
-                    if opcao_erro == "1":
+                input(
+                    "\nPressione ENTER para continuar."
+                )
 
-                        if gravar_preset:
-                            registrar_acao(
-                                acoes_preset,
-                                "erro_backup",
-                                {
-                                    "opcao": "Tentar novamente"
-                                }
-                            )
+                return
 
-                        break
+        elif confirmacao == "n":
 
-                    elif opcao_erro == "2":
+            print(
+                "\nOperação cancelada."
+            )
 
-                        if gravar_preset:
-                            registrar_acao(
-                                acoes_preset,
-                                "erro_backup",
-                                {
-                                    "opcao": "Cancelar operação"
-                                }
-                            )
+            input(
+                "\nPressione ENTER para continuar."
+            )
 
-                        return
+            return
 
-                    else:
-                        print("\nOpção inválida.")
+        else:
+
+            print(
+                "\nOpção inválida."
+            )
+
+            input(
+                "\nPressione ENTER para continuar."
+            )
+
+            return
+
+    try:
+
+        print(
+            "\nIniciando backup...\n"
+        )
+
+        progresso(
+            mundo_escolhido,
+            destino_backup
+        )
+
+        tamanho_original = calcular_tamanho(
+            mundo_escolhido
+        )
+
+        tamanho_backup = calcular_tamanho(
+            destino_backup
+        )
+
+        if tamanho_original != tamanho_backup:
+
+            print(
+                "\nO backup foi concluído, mas os tamanhos"
+            )
+
+            print(
+                "dos arquivos não são iguais."
+            )
+
+            print(
+                f"\nOriginal: "
+                f"{formatar_tamanho(tamanho_original)}"
+            )
+
+            print(
+                f"Backup: "
+                f"{formatar_tamanho(tamanho_backup)}"
+            )
+
+            if modo_execucao:
+
+                try:
+
+                    acao = next(
+                        acoes_execucao
+                    )
+
+                except StopIteration:
+
+                    return
+
+                if acao.get(
+                    "tipo"
+                ) == "erro_backup":
+
+                    resposta = acao.get(
+                        "dados",
+                        {}
+                    ).get(
+                        "resposta"
+                    )
+
+                    if resposta == "Tentar novamente":
+
+                        return realizar_backup(
+                            gravar_preset=gravar_preset,
+                            acoes_preset=acoes_preset,
+                            modo_execucao=True,
+                            acoes_execucao=acoes_execucao
+                        )
+
+                    return
+
+            return
+
+        print(
+            "\n================================"
+        )
+
+        print(
+            "       BACKUP CONCLUÍDO"
+        )
+
+        print(
+            "================================"
+        )
+
+        print(
+            f"\nMundo original: "
+            f"{mundo_escolhido.name}"
+        )
+
+        print(
+            f"Tamanho original: "
+            f"{formatar_tamanho(tamanho_original)}"
+        )
+
+        print(
+            f"\nBackup criado: "
+            f"{destino_backup.name}"
+        )
+
+        print(
+            f"Tamanho do backup: "
+            f"{formatar_tamanho(tamanho_backup)}"
+        )
+
+        print(
+            f"\nLocal: "
+            f"{destino_backup}"
+        )
+
+    except Exception as erro:
+
+        print(
+            "\nNão foi possível realizar o backup."
+        )
+
+        print(
+            f"Detalhes: {erro}"
+        )
+
+        if modo_execucao:
+
+            try:
+
+                acao = next(
+                    acoes_execucao
+                )
+
+            except StopIteration:
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            if acao.get(
+                "tipo"
+            ) == "erro_backup":
+
+                resposta = acao.get(
+                    "dados",
+                    {}
+                ).get(
+                    "resposta"
+                )
+
+                if resposta == "Tentar novamente":
+
+                    return realizar_backup(
+                        gravar_preset=gravar_preset,
+                        acoes_preset=acoes_preset,
+                        modo_execucao=True,
+                        acoes_execucao=acoes_execucao
+                    )
+
+                return
+
+        else:
+
+            print(
+                "\n1. Tentar novamente"
+            )
+
+            print(
+                "2. Cancelar operação"
+            )
+
+            opcao = input(
+                "\nEscolha uma opção: "
+            ).strip()
+
+            if opcao == "1":
+
+                return realizar_backup(
+                    gravar_preset=gravar_preset,
+                    acoes_preset=acoes_preset
+                )
+
+            return
+
+    input(
+        "\nPressione ENTER para continuar."
+    )

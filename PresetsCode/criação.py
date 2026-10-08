@@ -15,6 +15,11 @@ def criacao_preset(menu):
         acoes_preset=acoes_preset
     )
 
+    if not acoes_preset:
+        print("\nNenhuma ação foi registrada.")
+        input("\nPressione ENTER para continuar.")
+        return
+
     print("\nAções registradas:")
 
     for acao in acoes_preset:
@@ -30,6 +35,19 @@ def criacao_preset(menu):
         return
 
     nome_arquivo = pasta_presets / f"{nome_preset}.json"
+
+    if nome_arquivo.exists():
+
+        print("\nJá existe um preset com esse nome.")
+
+        sobrescrever = input(
+            "Deseja sobrescrever? (s/n): "
+        ).strip().lower()
+
+        if sobrescrever != "s":
+            print("\nOperação cancelada.")
+            input("\nPressione ENTER para continuar.")
+            return
 
     dados_preset = {
         "nome": nome_preset,

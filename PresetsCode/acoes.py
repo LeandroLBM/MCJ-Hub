@@ -1,4 +1,3 @@
-
 def registrar_acao(acoes_preset, tipo, dados=None):
 
     passo = {

@@ -1,6 +1,5 @@
 import os
 import sys
-import json
 
 from pathlib import Path
 from textwrap import dedent
@@ -9,6 +8,7 @@ from BackupCode.menu import menu_backup
 from ModificationsCode.update_modifications import menu_update_modifications
 from PresetsCode.menu import preset_menu
 from PresetsCode.acoes import registrar_acao
+from PresetsCode.executor import executar_preset
 
 
 def carregar_presets():
@@ -28,83 +28,12 @@ def carregar_presets():
     return sorted(presets)
 
 
-def executar_preset(nome_preset):
-
-    pasta_presets = Path("MJH_Presets")
-    arquivo_preset = pasta_presets / f"{nome_preset}.json"
-
-    if not arquivo_preset.is_file():
-
-        print(
-            f"\nO preset '{nome_preset}' não foi encontrado."
-        )
-
-        input("\nPressione ENTER para continuar.")
-
-        return
-
-    try:
-
-        with open(
-            arquivo_preset,
-            "r",
-            encoding="utf-8"
-        ) as arquivo:
-
-            dados_preset = json.load(arquivo)
-
-        os.system("cls")
-
-        print("========== EXECUTANDO PRESET ==========\n")
-
-        print(
-            f"Preset: "
-            f"{dados_preset.get('nome', nome_preset)}"
-        )
-
-        print()
-
-        acoes = dados_preset.get("acoes", [])
-
-        if not acoes:
-
-            print("Este preset não possui ações registradas.")
-
-            input("\nPressione ENTER para continuar.")
-
-            return
-
-        print(f"Ações encontradas: {len(acoes)}")
-        print()
-
-        # O executor das ações será implementado aqui.
-        #
-        # futuramente:
-        #
-        # executar_acoes(acoes)
-
-        print("Preset carregado com sucesso.")
-
-        input("\nPressione ENTER para continuar.")
-
-    except json.JSONDecodeError:
-
-        print(
-            "\nO arquivo do preset possui "
-            "um JSON inválido."
-        )
-
-        input("\nPressione ENTER para continuar.")
-
-    except Exception as erro:
-
-        print("\nNão foi possível carregar o preset.")
-        print(f"Detalhes: {erro}")
-
-        input("\nPressione ENTER para continuar.")
-
-
-def menu(gravar_preset=False, acoes_preset=None):
+def menu(
+    gravar_preset=False,
+    acoes_preset=None,
+    modo_execucao=False,
+    acoes_execucao=None
+):
 
     if acoes_preset is None:
         acoes_preset = []
@@ -151,21 +80,55 @@ def menu(gravar_preset=False, acoes_preset=None):
 
         print()
 
-        option = input(
-            "Escolha uma opção ou digite o nome do preset: "
-        ).strip()
+        if modo_execucao:
 
-        # ========================================
-        # FINALIZAR GRAVAÇÃO
-        # ========================================
+            try:
+
+                acao = next(acoes_execucao)
+
+            except StopIteration:
+
+                print(
+                    "\nO preset terminou antes "
+                    "de concluir o menu principal."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            if acao.get("tipo") != "menu":
+
+                print("\nErro no preset.")
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            dados = acao.get("dados", {})
+
+            menu_nome = dados.get("menu")
+            option = dados.get("opcao")
+
+            print(
+                f"Escolha uma opção: {option}"
+            )
+
+            print()
+
+        else:
+
+            option = input(
+                "Escolha uma opção ou digite o nome do preset: "
+            ).strip()
 
         if gravar_preset and option.casefold() == "terminar":
 
             return
-
-        # ========================================
-        # SAIR
-        # ========================================
 
         if option == "0":
 
@@ -192,10 +155,6 @@ def menu(gravar_preset=False, acoes_preset=None):
 
             sys.exit()
 
-        # ========================================
-        # GERENCIAMENTO DE MUNDOS
-        # ========================================
-
         elif option == "1":
 
             if gravar_preset:
@@ -212,12 +171,13 @@ def menu(gravar_preset=False, acoes_preset=None):
 
             menu_backup(
                 gravar_preset=gravar_preset,
-                acoes_preset=acoes_preset
+                acoes_preset=acoes_preset,
+                modo_execucao=modo_execucao,
+                acoes_execucao=acoes_execucao
             )
 
-        # ========================================
-        # ATUALIZAR MODIFICAÇÕES
-        # ========================================
+            if modo_execucao:
+                return
 
         elif option == "2":
 
@@ -238,9 +198,8 @@ def menu(gravar_preset=False, acoes_preset=None):
                 acoes_preset=acoes_preset
             )
 
-        # ========================================
-        # GERENCIAR PRESETS
-        # ========================================
+            if modo_execucao:
+                return
 
         elif option == "3":
 
@@ -258,11 +217,20 @@ def menu(gravar_preset=False, acoes_preset=None):
 
                 continue
 
-            preset_menu(menu)
+            if modo_execucao:
 
-        # ========================================
-        # EXECUTAR PRESET
-        # ========================================
+                print(
+                    "\nO gerenciamento de presets "
+                    "não pode ser executado por um preset."
+                )
+
+                input(
+                    "\nPressione ENTER para continuar."
+                )
+
+                return
+
+            preset_menu(menu)
 
         elif option in presets:
 
@@ -280,10 +248,6 @@ def menu(gravar_preset=False, acoes_preset=None):
                 continue
 
             executar_preset(option)
-
-        # ========================================
-        # OPÇÃO INVÁLIDA
-        # ========================================
 
         else:
 
